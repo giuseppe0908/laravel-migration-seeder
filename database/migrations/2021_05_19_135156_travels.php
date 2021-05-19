@@ -17,7 +17,11 @@ class Travels extends Migration
            $table->id('id');
            $table->string('location');
            $table->date('day');
-           $table->string('name-hotel');
+           $table->float('price',8,2);
+           $table->string('name_hotel');
+           // $table->date('updated_at');
+           // $table->date('created_at');
+           $table->timestamps();
          });
      }
 
@@ -28,6 +32,6 @@ class Travels extends Migration
       */
      public function down()
      {
-         Schema::drop('travel');
+         Schema::drop('travels');
      }
 }
